@@ -87,4 +87,4 @@ It's already a spreadsheet — just **Save As** and choose `.xlsx`, `.csv`, or w
 
 ## License
 
-Released under the MIT License — free to use, modify, and share. See the `LICENSE` file.
+Released under the GNU General Public License v3.0 (GPLv3) — free to use, modify, and share. Anyone who distributes a modified version must also keep it open source under the same GPLv3 terms, so it can never be turned into closed, proprietary software. See the LICENSE file.
