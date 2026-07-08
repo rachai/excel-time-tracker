@@ -22,15 +22,23 @@ It's free and open source so nobody has to deal with that again.
 
 - **Microsoft Excel for Windows (desktop).** The buttons use VBA macros with pop-up forms (UserForms), which run only in desktop Excel on Windows. Excel on Mac and Excel on the web will show your data but the buttons won't work.
 
+## ⚠️ About the "security risk" warning
+
+When you first open the file, Excel will probably show a pink/red bar saying **"SECURITY RISK — Microsoft has blocked macros from running because the source of this file is untrusted."**
+
+**This is expected and normal — don't be alarmed.** Any `.xlsm` file downloaded from the internet gets this treatment from Windows/Excel automatically, regardless of what's actually in it. It's not a sign that anything is wrong with this file specifically. Since this project is open source, you (or anyone) can open the VBA editor (**Alt+F11**) and read every line of macro code yourself before enabling anything, if you'd like to verify what it does.
+
+To make the warning go away for good, follow the first-time setup below.
+
 ## First-time setup (important!)
 
-Because this file contains macros and was downloaded from the internet, Windows blocks it by default. Do this **once** after downloading:
+Because this file contains macros and was downloaded from the internet, Windows blocks it by default. Do this **once** after downloading, *before* you open it:
 
-1. **Unblock the file.** Right-click `Time tracker open source.xlsm` → **Properties** → at the bottom, check **Unblock** → **OK**.
+1. **Unblock the file.** In File Explorer, right-click `Time tracker open source.xlsm` → **Properties** → at the bottom of the **General** tab, check the **Unblock** checkbox → **OK**.
 2. **Open the file** in Excel.
-3. If you see a yellow **SECURITY WARNING** bar saying macros are disabled, click **Enable Content**.
+3. If you still see a yellow **SECURITY WARNING** bar saying macros are disabled, click **Enable Content**. (You shouldn't see the red "security risk" bar at all if step 1 was done first.)
 
-If you skip step 1, the buttons will silently do nothing — that's the most common "it's not working" issue.
+If you skip step 1, the buttons will silently do nothing — that's the most common "it's not working" issue. If you already opened the file and saw the warning, just close it, do step 1, and reopen it.
 
 ## How to use it
 
@@ -81,6 +89,7 @@ It's already a spreadsheet — just **Save As** and choose `.xlsx`, `.csv`, or w
 ## Troubleshooting
 
 - **Buttons do nothing** → You skipped the Unblock step, or macros are disabled. See First-time setup.
+- **I see a red "SECURITY RISK" bar** → This is normal for any downloaded `.xlsm` file, not specific to this one. Close the file, do the Unblock step above, then reopen it.
 - **Still no macros** → File → Options → Trust Center → Trust Center Settings → Macro Settings → enable macros (or add the folder as a Trusted Location).
 - **Nothing happens on Mac / Excel Online** → The pop-up forms need desktop Excel on Windows.
 - **Client doesn't auto-fill** → Make sure the project exists on the Projects sheet, spelled the same way.
